@@ -27,8 +27,8 @@ public class SecurityUtils {
      * @return 系统用户名称
      */
     public static String getUsername(){
-        Object obj = getUserDetails();
-        return new JSONObject(obj).get("username", String.class);
+        UserDetails userDetails = getUserDetails();
+        return userDetails.getUsername();
     }
 
     /**
